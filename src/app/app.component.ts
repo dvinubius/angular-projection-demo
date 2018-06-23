@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  description = `
+  <wrapper>
+
+    <ng-template #ref1>
+        <counter></counter>
+    </ng-template>
+
+    <counter></counter>
+
+    <ng-template #ref2>
+        <counter></counter>
+    </ng-template>
+
+  <wrapper>
+  `;
 }

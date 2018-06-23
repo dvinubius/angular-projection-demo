@@ -1,0 +1,22 @@
+<div class='whole-wrapper'>
+  <div class="presentation">
+    <h4>Wrapper Component</h4>
+    <div class='description'> 
+      <pre>{{description}}</pre>
+    </div>
+  </div>
+  <div class="exhibits">
+    <div class="box">
+      <ng-container [ngTemplateOutlet]="tr1" *ngFor='let item of items'></ng-container>
+    </div>
+    <div class="box red"> 
+      <ng-content></ng-content>
+    </div>
+    <button (click)="show = !show" class='control-btn'>
+      {{ show ? 'Hide' : 'Show' }}
+    </button>
+    <div class="box" *ngIf="show">
+      <ng-container [ngTemplateOutlet]="tr2"></ng-container>
+    </div>
+  </div>
+</div>
